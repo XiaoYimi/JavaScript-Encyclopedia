@@ -4,7 +4,11 @@
 
 ## String 类型总述
 
-JavaScript String 类型，无符号 16 位值有序序列，用于表示字符串。JavaScript String 使用 Unicode 字符集的 UTF-16 编码的码点来存储值。当字符串的码点超出 Unicode 字符集码点时，将使用 2 个 16  位值的有序序列来表示，即代理对。所以，一个 Unicode 字符可以由 2 个 16位值的有序序列来表示。字符串属性 length 值表示字符串所包含的 16 位值的个数。JavaScript String 基于 0 的索引来读取 16 位值。
+JavaScript String 类型用于表示字符串。在 JavaScript String 中，将使用 Unicode 字符集的 UTF-16 编码来表示，且该 Unicode 字符的码点为 16位；当字符串所对应的码点超出 Unicode 字符 UTF-16 规则编码，将使用 2 个 16位值的序列来表示(有时候一个字符串的长度为 2 的原因就是如此)，即"代理对"。所以，一个 Unicode 字符可以用 1个 16位值来表示，也可以用 2 个 16位值来表示，这取决于该 Unicode 字符是否超出 UTF-16 规则编码。
+
+JavaScript 字符串的属性 length 值，本质上是指字符串所包含的 16位值的个数。
+
+JavaScript 字符串基于 0 的索引来读取 16位值。
 
 
 
